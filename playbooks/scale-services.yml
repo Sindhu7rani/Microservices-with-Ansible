@@ -1,0 +1,4 @@
+- hosts: microservices_hosts
+  tasks:
+    - name: Scale services
+      shell: docker-compose scale {{ service_name }}={{ replicas }}

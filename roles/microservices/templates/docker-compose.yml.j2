@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  service1:
+    image: "{{ service1_image }}"
+    ports:
+      - "8080:80"
+
+  service2:
+    image: "{{ service2_image }}"
+    ports:
+      - "8081:80"

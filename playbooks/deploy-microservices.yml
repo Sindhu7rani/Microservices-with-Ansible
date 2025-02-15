@@ -1,0 +1,9 @@
+- hosts: microservices_hosts
+  tasks:
+    - name: Copy Docker Compose file
+      template:
+        src: templates/docker-compose.yml.j2
+        dest: /opt/microservices/docker-compose.yml
+
+    - name: Deploy microservices
+      shell: docker-compose -f /opt/microservices/docker-compose.yml up -d
